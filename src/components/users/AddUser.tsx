@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
-import * as yup from "yup"
+import * as yup from "yup";
 
 const AddUser = () => {
   const navigate = useNavigate();
@@ -25,23 +25,15 @@ const AddUser = () => {
     navigate("/");
   };
 
-  const advancedSchema =  yup.object().shape({
-     name: yup.string()
-    .max(15, 'Must be 15 characters or less')
-    .required('Required'),
-    username: yup.string()
-      .min(4, "Must be 4 charecters or more")
-      .max(20, "Must be 20 characters or less")
-      .required("Required"),
-    email: yup.string()
-      .email("Enter valid Email")
-      .required("Email is required"),
-    phone: yup.string()
-      .min(6, "Number must be at least 6 charaters")
-      .required("Number is required"),
-    website: yup.string()
-      .min(6, "Number must be at least 6 charaters")
-      .required("Number is required"),
+  const advancedSchema = yup.object().shape({
+    name: yup.string().required("Name is Required"),
+    username: yup.string().required("username  is Required"),
+    email: yup
+      .string()
+      .required("Email is Required")
+      .email("Please enter a valid email address"),
+    phone: yup.string().required("Phone number is Required"),
+    website: yup.string().required("Website is Required"),
   });
 
   return (
@@ -53,7 +45,7 @@ const AddUser = () => {
         phone: "",
         website: "",
       }}
-       validationSchema={advancedSchema}
+      validationSchema={advancedSchema}
       onSubmit={(values) => {
         console.log(values);
       }}

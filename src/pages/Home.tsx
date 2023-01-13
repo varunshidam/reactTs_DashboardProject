@@ -28,6 +28,7 @@ export function Home() {
           <th scope="col">Name</th>
           <th scope="col">User Name</th>
           <th scope="col">Emails</th>
+          <th scope="col">Website</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -38,6 +39,7 @@ export function Home() {
             <td>{user.name}</td>
             <td>{user.username}</td>
             <td>{user.email}</td>
+            <td>{user.website}</td>
             <td>
               <div
                 className="btn-group"

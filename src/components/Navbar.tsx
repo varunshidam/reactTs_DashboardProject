@@ -23,10 +23,13 @@ export function Navbar() {
             </Nav.Link>
           </Nav>
           <Nav.Link to="/users/add" as={NavLink}>
-            <button className="btn btn-success btn-sm float-left" >
+            <button className="btn btn-success btn-sm float-left">
               Add User
             </button>
           </Nav.Link>
+
+          {/* ------------------------------------------------------------------------ */}
+
           {cartQuantity > 0 && (
             <Button
               onClick={openCart}
