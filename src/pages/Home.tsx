@@ -25,11 +25,11 @@ export function Home() {
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">User Name</th>
-          <th scope="col">Emails</th>
-          <th scope="col">Website</th>
-          <th scope="col">Action</th>
+          <th scope="col">Name : </th>
+          <th scope="col">User Name :</th>
+          <th scope="col">Emails :</th>
+          <th scope="col">Website : </th>
+          <th scope="col">Action : </th>
         </tr>
       </thead>
       <tbody>
